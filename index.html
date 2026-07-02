@@ -216,6 +216,7 @@
         .hero-grid {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 30px;
             flex-wrap: wrap;
             position: relative;
@@ -223,7 +224,9 @@
         }
 
         .hero-content {
-            flex: 1 1 350px;
+            flex: 1 1 100%;
+            max-width: 800px;
+            text-align: center;
         }
 
         .hero-content .badge {
@@ -253,12 +256,15 @@
             font-size: 1.1rem;
             color: #8892b0;
             margin-bottom: 25px;
-            max-width: 500px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .hero-buttons {
             display: flex;
             gap: 12px;
+            justify-content: center;
             flex-wrap: wrap;
         }
 
@@ -266,6 +272,7 @@
             display: flex;
             gap: 25px;
             margin-top: 30px;
+            justify-content: center;
             flex-wrap: wrap;
         }
 
@@ -289,44 +296,6 @@
             color: #8892b0;
             font-size: 0.75rem;
             display: block;
-        }
-
-        /* ===== ИЗОБРАЖЕНИЯ СПРАВА ===== */
-        .hero-image {
-            flex: 1 1 280px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .hero-logo {
-            max-width: 140px;
-            height: auto;
-            opacity: 0.9;
-            filter: drop-shadow(0 4px 20px rgba(212, 175, 55, 0.15));
-            transition: 0.4s;
-        }
-
-        .hero-logo:hover {
-            transform: scale(1.05);
-            opacity: 1;
-        }
-
-        .hero-car {
-            width: 100%;
-            max-width: 420px;
-            height: auto;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-            border: 2px solid rgba(212, 175, 55, 0.2);
-            transition: 0.4s;
-        }
-
-        .hero-car:hover {
-            transform: scale(1.02);
-            border-color: #d4af37;
         }
 
         /* ===== УСЛУГИ ===== */
@@ -406,6 +375,59 @@
             font-size: 0.9rem;
         }
 
+        /* ===== БЛОКИ ПРЕИМУЩЕСТВ ===== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .feature-block {
+            background: #fff;
+            padding: 30px 24px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eef2f7;
+            transition: 0.4s;
+        }
+
+        .feature-block:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+            border-color: #d4af37;
+        }
+
+        .feature-block .icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            font-size: 2rem;
+            color: #d4af37;
+            transition: 0.3s;
+        }
+
+        .feature-block:hover .icon {
+            background: #d4af37;
+            color: #0a0a1a;
+        }
+
+        .feature-block h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-block p {
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
         /* ===== О НАС ===== */
         .about-section {
             background: #fff;
@@ -419,7 +441,8 @@
         }
 
         .about-text {
-            flex: 1 1 300px;
+            flex: 1 1 100%;
+            text-align: center;
         }
 
         .about-text .tag {
@@ -439,13 +462,19 @@
             color: #475569;
             margin-bottom: 12px;
             font-size: 0.95rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .about-features {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
             gap: 10px;
             margin-top: 16px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .about-features div {
@@ -454,50 +483,11 @@
             gap: 8px;
             font-weight: 500;
             font-size: 0.9rem;
+            justify-content: center;
         }
 
         .about-features i {
             color: #d4af37;
-        }
-
-        .about-image {
-            flex: 1 1 250px;
-            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 100%);
-            border-radius: 24px;
-            padding: 35px 20px;
-            text-align: center;
-            color: #fff;
-            border: 1px solid rgba(212, 175, 55, 0.2);
-        }
-
-        .about-image i {
-            font-size: 4rem;
-            color: #d4af37;
-            margin-bottom: 12px;
-        }
-
-        .about-image h3 {
-            font-size: 1.3rem;
-            margin-bottom: 6px;
-        }
-
-        .about-image p {
-            color: #8892b0;
-            font-size: 0.9rem;
-        }
-
-        .about-image .stats-row {
-            margin-top: 16px;
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            color: #d4af37;
-            font-size: 0.9rem;
-        }
-
-        .about-image .stats-row i {
-            font-size: 1.2rem;
-            margin-bottom: 0;
         }
 
         /* ===== ОТЗЫВЫ ===== */
@@ -694,9 +684,6 @@
             .hero-content h1 {
                 font-size: 2.4rem;
             }
-            .hero-car {
-                max-width: 340px;
-            }
         }
 
         @media (max-width: 768px) {
@@ -772,26 +759,12 @@
             .hero {
                 padding: 35px 0 40px;
             }
-            .hero-grid {
-                flex-direction: column;
-                text-align: center;
-                gap: 20px;
-            }
-            .hero-content {
-                flex: 1 1 auto;
-                order: 2;
-            }
             .hero-content h1 {
                 font-size: 2rem;
             }
             .hero-content p {
                 font-size: 1rem;
                 max-width: 100%;
-                margin-left: auto;
-                margin-right: auto;
-            }
-            .hero-buttons {
-                justify-content: center;
             }
             .hero-buttons .btn {
                 font-size: 0.85rem;
@@ -799,7 +772,6 @@
                 white-space: normal;
             }
             .hero-stats {
-                justify-content: center;
                 gap: 18px;
             }
             .hero-stats i {
@@ -807,20 +779,6 @@
             }
             .hero-stats span {
                 font-size: 1rem;
-            }
-
-            .hero-image {
-                order: 1;
-                flex: 1 1 auto;
-                width: 100%;
-            }
-            .hero-logo {
-                max-width: 100px;
-            }
-            .hero-car {
-                max-width: 100%;
-                max-height: 220px;
-                width: auto;
             }
 
             .section {
@@ -852,34 +810,20 @@
                 font-size: 0.8rem;
             }
 
-            .about-grid {
-                flex-direction: column;
-                text-align: center;
-                gap: 25px;
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
             }
-            .about-text h2 {
-                font-size: 1.7rem;
+            .feature-block {
+                padding: 24px 18px;
             }
-            .about-text p {
-                font-size: 0.9rem;
-            }
+
             .about-features {
                 grid-template-columns: 1fr 1fr;
-                justify-items: center;
                 gap: 8px;
             }
             .about-features div {
                 font-size: 0.85rem;
-            }
-            .about-image {
-                width: 100%;
-                padding: 28px 16px;
-            }
-            .about-image i {
-                font-size: 3rem;
-            }
-            .about-image h3 {
-                font-size: 1.2rem;
             }
 
             .reviews-grid {
@@ -976,12 +920,6 @@
             .hero-stats small {
                 font-size: 0.65rem;
             }
-            .hero-car {
-                max-height: 160px;
-            }
-            .hero-logo {
-                max-width: 80px;
-            }
             .section-header h2 {
                 font-size: 1.4rem;
             }
@@ -1042,7 +980,7 @@
 
             <nav class="nav" id="mainNav">
                 <a href="#services">Услуги</a>
-                <a href="#about">О нас</a>
+                <a href="#features">Преимущества</a>
                 <a href="#reviews">Отзывы</a>
                 <a href="#contacts">Контакты</a>
             </nav>
@@ -1090,24 +1028,6 @@
                     </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <!-- Логотип Mercedes -->
-                <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Logo.svg/1200px-Mercedes-Logo.svg.png"
-                    alt="Mercedes-Benz Logo"
-                    class="hero-logo"
-                    title="Mercedes-Benz"
-                    loading="lazy"
-                >
-                <!-- Фото Mercedes -->
-                <img
-                    src="https://cdn.pixabay.com/photo/2019/04/19/09/11/mercedes-benz-4137485_1280.jpg"
-                    alt="Mercedes-Benz"
-                    class="hero-car"
-                    title="Mercedes-Benz"
-                    loading="lazy"
-                >
-            </div>
         </div>
     </section>
 
@@ -1153,6 +1073,33 @@
         </div>
     </section>
 
+    <!-- ===== 3 БЛОКА ПРЕИМУЩЕСТВ ===== -->
+    <section class="section" id="features" style="background: #f8fafc;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Почему <span>выбирают нас</span></h2>
+                <p>Три главных преимущества работы с MercedesService</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-block">
+                    <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Гарантия качества</h3>
+                    <p>Предоставляем официальную гарантию на все виды работ и установленные запчасти до 2 лет.</p>
+                </div>
+                <div class="feature-block">
+                    <div class="icon"><i class="fas fa-tools"></i></div>
+                    <h3>Современное оборудование</h3>
+                    <p>Используем профессиональное диагностическое оборудование и стенды для точной настройки.</p>
+                </div>
+                <div class="feature-block">
+                    <div class="icon"><i class="fas fa-clock"></i></div>
+                    <h3>Соблюдение сроков</h3>
+                    <p>Чётко соблюдаем оговоренные сроки ремонта, чтобы вы могли планировать своё время.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ===== О НАС ===== -->
     <section class="section about-section" id="about">
         <div class="container">
@@ -1166,16 +1113,6 @@
                         <div><i class="fas fa-check-circle"></i> Оригинальные запчасти</div>
                         <div><i class="fas fa-check-circle"></i> Гарантия на все работы</div>
                         <div><i class="fas fa-check-circle"></i> Современное оборудование</div>
-                        <div><i class="fas fa-check-circle"></i> Бесплатная диагностика</div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <i class="fas fa-garage"></i>
-                    <h3>Собственная ремонтная зона</h3>
-                    <p>6 подъёмников, стенд развал-схождения, диагностическое оборудование и склад запчастей в наличии</p>
-                    <div class="stats-row">
-                        <div><i class="fas fa-tools"></i> 6 постов</div>
-                        <div><i class="fas fa-user-cog"></i> 8 мастеров</div>
                     </div>
                 </div>
             </div>
@@ -1192,21 +1129,21 @@
             <div class="reviews-grid">
                 <div class="review-card">
                     <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p>"Отличный сервис! Быстро нашли причину стука в подвеске, заменили рычаги за день. Спасибо мастерам."</p>
-                    <div class="author">Андрей К.</div>
-                    <div class="car">Mercedes E-Class</div>
+                    <p>"Отличный сервис! Оперативно нашли причину неисправности, всё объяснили и согласовали. Ремонт выполнен качественно."</p>
+                    <div class="author">Сергей В.</div>
+                    <div class="car">Mercedes E-Class W213</div>
                 </div>
                 <div class="review-card">
                     <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p>"Делала диагностику и замену масла в АКПП. Всё чётко, без навязывания. Цена адекватная."</p>
-                    <div class="author">Екатерина С.</div>
-                    <div class="car">Mercedes GLC</div>
+                    <p>"Приятно удивлена профессиональным подходом. Сделали диагностику, заменили масло в АКПП. Цены адекватные."</p>
+                    <div class="author">Татьяна М.</div>
+                    <div class="car">Mercedes GLC 300</div>
                 </div>
                 <div class="review-card">
                     <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p>"Обращался с ошибкой по двигателю. Помимо ремонта дали рекомендации по эксплуатации. Рекомендую."</p>
-                    <div class="author">Игорь П.</div>
-                    <div class="car">Mercedes S-Class</div>
+                    <p>"Обращался с ошибкой по двигателю. Дали подробные рекомендации, заменили датчики. Рекомендую этот сервис."</p>
+                    <div class="author">Алексей Н.</div>
+                    <div class="car">Mercedes S-Class W222</div>
                 </div>
             </div>
         </div>
